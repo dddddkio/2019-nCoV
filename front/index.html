@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="res/style.css" />
+    <script src="res/js/echarts.js"></script>
+    <script src="res/js/china.js"></script>
+	  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="res/js/jquery-3.6.0.js"></script>
+    <title>全国疫情可视化</title>
+    <style type="text/css">
+      body::after {
+        position: absolute;
+        left: 0.1rem;
+        top: 0.1rem;
+      }
+      .chart::after {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -1rem;
+        margin-left: -1rem;
+        opacity: 0.8;
+      }
+    </style>
+  </head>
+  <body
+    class="fill-parent"
+    dg-chart-options="{title:{show:false},legend:{top:0},grid:{top:25}}"
+    dg-chart-auto-resize="true"
+    dg-chart-theme="{color:'#F0F0F0',backgroundColor:'transparent',actualBackgroundColor:'#000c3b'}"
+  >
+  	<!--标题部分-->
+    <div class="head">
+      <div class="title">
+        <div class="title-left"></div>
+        <div class="title-value">全国疫情可视化</div>
+        <div class="title-right"></div>
+      </div>
+    </div>
+
+	<!--时间部分-->
+    <div id="nowDiv" class="topTime">
+      <script>
+        function clock() {
+          var d = new Date().toLocaleString();
+          document.getElementById("nowDiv").innerText = d;
+        }
+        self.setInterval("clock()", 1000);
+      </script>
+    </div>
+
+    <!--内容部分-->
+    <div class="content">
+      <div class="layout layout-left-top">
+        <div class="panel border-all">
+          <div class="title">全国累计趋势</div>
+          <div class="chart" dg-chart-widget="" id="l1"></div>
+          <div class="border-foot"></div>
+        </div>
+      </div>
+      <div class="layout layout-left-bottom">
+        <div class="panel border-all">
+          <div class="title">全国新增趋势</div>
+          <div class="chart" dg-chart-widget="" id="l2"></div>
+          <div class="border-foot"></div>
+        </div>
+      </div>
+      <div class="layout layout-center-top">
+        <div class="panel border-all" id="app">
+          <div class="title"></div>
+          <div class="c1">
+            <div class="info">
+              <p class="data" id="total">{{getConfirmed()}}</p>
+              <p class="text">累计确诊</p>
+            </div>
+            <div class="info">
+              <p class="data">{{getSuspect()}}</p>
+              <p class="text">累计疑似</p>
+            </div>
+            <div class="info">
+              <p class="data">{{getHeal()}}</p>
+              <p class="text">累计治愈</p>
+            </div>
+            <div class="info">
+              <p class="data">{{getDead()}}</p>
+              <p class="text">累计死亡</p>
+            </div>
+          </div>
+          <div class="chart" dg-chart-widget=""></div>
+          <div class="border-foot"></div>
+        </div>
+      </div>
+      <div class="layout layout-center-bottom">
+        <div class="panel border-all">
+          <div class="title">全国疫情地图</div>
+          <div class="chart" dg-chart-widget="" id="c1"></div>
+          <div class="border-foot"></div>
+        </div>
+      </div>
+      <div class="layout layout-right-top">
+        <div class="panel border-all">
+          <div class="title">全国新冠肺炎治愈/死亡率</div>
+          <div class="chart" dg-chart-widget="" id="r1" style="margin-top: 0%;"></div>
+          <div class="border-foot"></div>
+        </div>
+      </div>
+      <div class="layout layout-right-bottom">
+        <div class="panel border-all">
+          <div class="title">全国确诊TOP5</div>
+          <div class="chart" dg-chart-widget="" id="r2"></div>
+          <div class="border-foot"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="res/js/l1.js"></script>
+    <script src="res/js/l2.js"></script>
+    <script src="res/js/c1.js"></script>
+	  <script src="res/js/c2.js"></script>
+    <script src="res/js/r1.js"></script>
+    <script src="res/js/r2.js"></script>
+	
+  </body>
+</html>
