@@ -29,32 +29,33 @@
 
 > ```
 > |-- 2019-nCoV
->     |-- .gitattributes
->     |-- README.md
->     |-- 有点蠢的课程设计报告....pdf
->     |-- html
->     |   |-- index.html
->     |   |-- res
->     |       |-- style.css
->     |       |-- images
->     |       |   |-- title-left.png
->     |       |   |-- title-right.png
->     |       |-- js
->     |           |-- c1.js
->     |           |-- c2.js
->     |           |-- china.js
->     |           |-- data-1528971808162-BkOXf61WX.json
->     |           |-- echarts-gl.min.js
->     |           |-- echarts.js
->     |           |-- jquery-3.6.0.js
->     |           |-- l1.js
->     |           |-- l2.js
->     |           |-- r1.js
->     |           |-- r2.js
->     |-- python
->         |-- app.py    -------------------api       
->         |-- spider.py -------------------爬虫
->         |-- test.py
+>  |-- .gitattributes
+>  |-- README.md
+>  |-- 有点蠢的课程设计报告....pdf
+>  |-- pic.png
+>  |-- html
+>  |   |-- index.html
+>  |   |-- res
+>  |       |-- style.css
+>  |       |-- images
+>  |       |   |-- title-left.png
+>  |       |   |-- title-right.png
+>  |       |-- js
+>  |           |-- c1.js
+>  |           |-- c2.js
+>  |           |-- china.js
+>  |           |-- data-1528971808162-BkOXf61WX.json
+>  |           |-- echarts-gl.min.js
+>  |           |-- echarts.js
+>  |           |-- jquery-3.6.0.js
+>  |           |-- l1.js
+>  |           |-- l2.js
+>  |           |-- r1.js
+>  |           |-- r2.js
+>  |-- python
+>      |-- app.py    -------------------api       
+>      |-- spider.py -------------------爬虫
+>      |-- test.py
 > 
 > ```
 >
