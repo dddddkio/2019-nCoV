@@ -14,7 +14,7 @@
 
 ### 数据展示
 
-![212](C:\Users\Todd\OneDrive\桌面\212.png)
+![展示图](https://github.com/dddddkio/2019-nCoV/blob/main/pic.png?) 
 
 ### 技术栈
 
